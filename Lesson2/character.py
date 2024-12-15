@@ -18,11 +18,9 @@ class Character:
         print(f" Захист: {self.defence}")
 
     def take_damage(self, damage):
-        actual_damage = max(damage - self.defence, 0)
-        self.health = max(self.health - actual_damage, 0)
-        print(f"{self.name} отримує {actual_damage} шкоди! Залишилось {self.health} здоров'я.")
+        self.health=max(self.health-damage,0)
+        return damage
 
     def attack(self, target):
-        print(f"{self.name} атакує {target.name}")
-        target.take_damage(self.damage)
+       return target.take_damage(self.damage)
 
