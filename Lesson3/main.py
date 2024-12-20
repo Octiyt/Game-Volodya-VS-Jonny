@@ -1,11 +1,12 @@
 from Lesson2.character import Character
 from Lesson3.berserk import Berserk
 from Lesson3.tank import Tank
+from Assasin import Assassin
 
 player1 = Tank("Jonny",120,7,7 )
 player1.print_stats()
 
-player2= Berserk("Volodya",100,10,0)
+player2= Assassin("Volodya",100,10,0)
 player2.print_stats()
 
 while player1.health > 0 and player2.health > 0:
