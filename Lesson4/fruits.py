@@ -1,6 +1,6 @@
 fruits = ["Яблука", "Банан", "апельсин", "Груша", "ківі"]
 
-print("Список фруктовв: ")
+print("Список фруктів:")
 i = 1
 for fruit in fruits:
     print(f"{i}. {fruit}")
@@ -8,11 +8,13 @@ for fruit in fruits:
 
 while True:
     try:
-        indeh = int(input("введи номер фрукта: ")) - 1
+        indeh = int(input("Введіть номер фрукта: ")) - 1
         if 0 <= indeh < len(fruits):
-            print(f"Ви выбрали: {fruits[indeh]}")
+            print(f"Ви вибрали: {fruits[indeh]}")
             break
         else:
-            print("Неправильний номер попробуй ще раз")
+            raise IndexError("Номер фрукта поза межами списку")
     except ValueError:
-        print("пожалуйста введи число")
+        print("Будь ласка, введіть число.")
+    except IndexError as e:
+        print(f"Помилка: {e}. Спробуйте ще раз.")
